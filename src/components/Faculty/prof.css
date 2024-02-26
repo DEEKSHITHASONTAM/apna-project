@@ -58,4 +58,9 @@
     border-radius: 50%;
     border: 1px solid rgb(255, 0, 195);
 }
+.circle img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
 

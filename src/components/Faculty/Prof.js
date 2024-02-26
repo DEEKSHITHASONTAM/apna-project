@@ -1,14 +1,21 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
+import axios from 'axios';
 import './prof.css'
-import  CsePorfData from './main';
+// import  data from "./main"
 
 function ProfCard(props){
+   
+
+    // data = data;
+  
+    const imageSource = "https://www.cse.iitk.ac.in/profileimages/" + props.uniqueID + ".jpg"
+
     return(
         <div className='prof-card'>
             <div className='box-1'>
                 <div className="prof-dp">
                     <div className='circle'>
-                    <img src="users.png" alt="" />
+                    <img src= {imageSource} alt="" />
                     </div>
                 </div>
                 <div className="prof-details">
@@ -29,10 +36,21 @@ function ProfCard(props){
 }
 
 function Prof() {
+    const url = "/faculty";
+    const [data, setData] = useState([]);
+  
+    const fetchInfo = () => {
+      return axios.get(url).then((res) => setData(res.data));
+    };
+  
+    useEffect(() => {
+      fetchInfo();
+    }, [])
+
   return (
     <div className='faculty-page'>
         {
-            CsePorfData.map((item) => {
+            data.map((item) => {
               return (
                <ProfCard 
                name = {item.name} 
@@ -41,6 +59,7 @@ function Prof() {
                 address = {item.address}
                 email = {item.email}
                 research ={item.research}
+                uniqueID ={item.uniqueID}
                />
               )
             })
