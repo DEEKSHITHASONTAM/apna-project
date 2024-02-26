@@ -45,7 +45,7 @@ const Contacts = [
         id: 7,
         name: "Jaswanth",
         phone: 7013451713,
-        image:" ",
+        image:"images/jaswanth.jpg",
         email: "kartikkartik29957@gmail.com"
     },
     {

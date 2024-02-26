@@ -12,14 +12,15 @@ function NavBar(){
          <ul>
              <li><Link className="a" to="/LogOut">Log Out</Link></li>
              <li><Link className="a" to="/Login">Log in</Link></li>
-             <li><Link className="a" to="/Student">Contact us</Link></li>
-             <li><Link className="a" to="/Faculty">Faculty</Link></li>
              <li><Link className="a" to="/About">About</Link></li>
+             <li><Link className="a" to="/Faculty/Cse">Faculty</Link></li>
+             <li><Link className="a" to="/ContactUs">Contact us</Link></li>
              <li><Link className="a" to="/">Home</Link></li>
+             <li><Link className="a" to="/Register">Register</Link></li>
        </ul>
        
     </div>
-    <Outlet />
+            <Outlet />
     </>
     );
 }

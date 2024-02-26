@@ -1,26 +1,11 @@
-import React from "react";
-import Contacts from "./contact";
-import Card from "./Card";
+import React from 'react'
 
-function About(){
-    return (
-        <div>
-        <div className='cont'>
-          { Contacts.map((item) => {
-            return (
-              <Card 
-              name = {item.name}
-              phone ={item.phone}
-              email ={item.email}
-              image ={item.image}
-              />
-              );
-           })}
-           <Card />
-           <Card />
-        </div>
-        </div>
-      );
+function About() {
+  return (
+    <div>
+      <h1 className="random">This is About page!!</h1>
+    </div>
+  )
 }
 
-export default About;
+export default About
